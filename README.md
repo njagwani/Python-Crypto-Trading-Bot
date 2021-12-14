@@ -42,14 +42,14 @@ In order to buy and sell crypto automatically with the help of Binance, we need 
 The Program ran successfully without any errors. This program can be run overnight and the best part is that we can use different technical indicators to experiment with our Crypto Bot. 
 
 ## Binance WebSocket Kline Candlestick Streams Payload Terminology used in the code:
-k = Lenght and Breadth of the candle (includes start time, end time, high/low/close/open price)
-c = Close price of the candlestick
-x = True/ False , it tells us that when x=true that means that a new candlestick formation has started. 
+- k = Lenght and Breadth of the candle (includes start time, end time, high/low/close/open price)
+- c = Close price of the candlestick
+- x = True/ False , it tells us that when x=true that means that a new candlestick formation has started. 
 ## References: 
-[Binance API Wrapper for Creating Orders and placing a Binance client](https://github.com/sammchardy/python-binance)
-[PythonWebSocketClient Long Lived Connection](https://pypi.org/project/websocket-client/)
-[Binance API WebSocketStreams - KlineCandleStickStreams](https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md#klinecandlestick-streams)
-[TA-Lib RSI Indicator](https://mrjbq7.github.io/ta-lib/)
+- [Binance API Wrapper for Creating Orders and placing a Binance client](https://github.com/sammchardy/python-binance)
+- [PythonWebSocketClient Long Lived Connection](https://pypi.org/project/websocket-client/)
+- [Binance API WebSocketStreams - KlineCandleStickStreams](https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md#klinecandlestick-streams)
+- [TA-Lib RSI Indicator](https://mrjbq7.github.io/ta-lib/)
 
 ## Challenges:
 I had a few challenges when it came to installing numpy and talib modules. I ran into an error "modulenotfounderror: no module named 'numpy'". In order to help resolve the fix, I navigated to the Python Scripts Directory (Python C:\Python\Python3.9\Scripts). Coopy the Scripts Directoyr Path (Python C:\Python\Python3.9\Scripts) . Now launch "CMD" with Administrator Rights, go to the Scripts path by pasting "cd C:\Python\Python3.9\Scripts" in CMD window. Now, enter the command "pip install numpy". 
