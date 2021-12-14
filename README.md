@@ -35,7 +35,7 @@ When we receive that pricing data, we are going to be processing that pricing da
 
 In the pieces of code, you can see that json.loads is added to convert the json string to Python Data Structure. Import pprint will pretty print the format which will be easy to use and interpolate the pricing data.  Import talib and numpy is to apply the RSI indicator to the series of closes (closing prices of each candle stick). 
 
-![](Images/Cryptoproj5.png)
+![](CryptoTradingApp/Images/Cryptoproj5.png)
 
 In order to buy and sell crypto automatically with the help of Binance, we need to be able to pull in the code. Here comes the use of python binance package. Here, Binance.client and Binance.enums is included along with the Client which is required to connect to Binance account for buying and selling trades automatically. And the last thing to do here is to define an order function which is going take the details like symbol, quantity, side type (buy/Sell) and an order type. Once the function was defined, it was then time to call the function from within the Buy Logic and Sell Logic.
 
