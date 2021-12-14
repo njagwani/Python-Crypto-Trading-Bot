@@ -18,24 +18,24 @@ The data is being recieved from a Websocket for Candle Stick Streams, please fin
 All the closing prices are being tracked here for each of the candle sticks so that we initialize a list. Also, the position is being tracked if are in the position to buy/sell. I have intialized the Binance Client so that buy/sell orders can be executed against Binance. 
 
 And then comes the step where the function to order is defined and built.
-## In Depth Analysis how the Crytpo Bot works!
+## In Depth Analysis on How the Crytpo Bot works!
 Initially, how it happens is that first a connection is made to a websocket by creating a websocket app which has a socket to listen "SOCKET = wss://stream.binance.com:9443/ws/ethusdt@kline_1m". 
 
 So, we are listening for data that is coming in and we will call different functions whenever we get a new message and when we open a connection "ws = websocket.WebSocketApp(SOCKET, on_open=on_open, on_close=on_close, on_message=on_message). When we run the websocket, each time we recieve a message and we are going to be receiving some pricing data.
 
-![](Images/Cryptoproj1.PNG)
+![](Images/Cryptoproj1.png)
 
-![](Images/Cryptoproj2.PNG)
+![](Images/Cryptoproj2.png)
 
 When we receive that pricing data, we are going to be processing that pricing data in the form of candle sticks. We are going to look at the close of the candle sticks and apply a technical indicator to those close in real-time. Whenever our RSI is above the overbought threshold, we are going to execute an sell order. Whenever our RSI is below the oversold threshold, we are going to issue a buy order. 
 
-![](Images/Cryptoproj3.PNG)
+![](Images/Cryptoproj3.png)
 
-![](Images/Cryptoproj4.PNG)
+![](Images/Cryptoproj4.png)
 
 In the pieces of code, you can see that json.loads is added to convert the json string to Python Data Structure. Import pprint will pretty print the format which will be easy to use and interpolate the pricing data.  Import talib and numpy is to apply the RSI indicator to the series of closes (closing prices of each candle stick). 
 
-![](Images/Cryptoproj5.PNG)
+![](Images/Cryptoproj5.png)
 
 In order to buy and sell crypto automatically with the help of Binance, we need to be able to pull in the code. Here comes the use of python binance package. Here, Binance.client and Binance.enums is included along with the Client which is required to connect to Binance account for buying and selling trades automatically. And the last thing to do here is to define an order function which is going take the details like symbol, quantity, side type (buy/Sell) and an order type. Once the function was defined, it was then time to call the function from within the Buy Logic and Sell Logic.
 
