@@ -15,13 +15,13 @@ In this project, I have used the RSI indicator as my technical indicator to make
 
 The data is being received from a Websocket for Candle Stick Streams, please find link for your reference [WebSocket Streams for Binance](https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md#klinecandlestick-streams). I have chosen 1 minute interval for my Candlestick charts interval and my symbol is ethusdt (Etherium). 
 
-All the closing prices are being tracked here for each of the candle sticks so that we initialize a list. Also, the position is being tracked if are in the position to buy/sell. I have initialized the Binance Client so that buy/sell orders can be executed against Binance. 
+All the closing prices are being tracked here for each of the candle sticks so that we initialize a list. Also, the position is being tracked if incase if you are in the position to buy/sell. I have initialized the Binance Client so that buy/sell orders can be executed against Binance. 
 
 And then comes the step where the function to order is defined and built.
 ## How does the Crytpo Bot work?
 Initially, how it happens is that first a connection is made to a websocket by creating a websocket app which has a socket to listen "SOCKET = wss://stream.binance.com:9443/ws/ethusdt@kline_1m". 
 
-So, we are listening for data that is coming in and we will call different functions whenever we get a new message and when we open a connection "ws = websocket.WebSocketApp(SOCKET, on_open=on_open, on_close=on_close, on_message=on_message). When we run the websocket, each time we receive a message and we are going to be receiving some pricing data.
+So, we are listening for data that is coming in. We will call different functions whenever we get a new message and when we open a connection "ws = websocket.WebSocketApp(SOCKET, on_open=on_open, on_close=on_close, on_message=on_message). When we run the websocket, each time we receive a message, we are going to be receiving some pricing data for it. 
 
 ![](Images/Cryptoproj1.PNG)
 
