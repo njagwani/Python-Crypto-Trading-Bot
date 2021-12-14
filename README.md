@@ -1,13 +1,13 @@
 # Python-Crypto-Trading-Bot
-Python Crypto Trading Bot in Real-Time to Buy and Sell on Binance that uses Binance API, WebSockets and TA-Lib.
+Here is my finished project on Python Crypto Trading Bot in Real-Time to Buy and Sell on Binance that uses Binance API, WebSockets and TA-Lib.
 
 In this project, I have used Python,  TA libraries, Binance API's & Websockets to retrieve Real-time price data and applied Technical Indicators to this pricing data in order to execute Trades automatically using Binance as a Broker. 
 ## Pre-Requistes:
-Python 3.9 - The most popular language for data science, analysis, and machine learning
-Python-Binance - Unofficial Python wrapper for the Binance exchange REST API v3 ~ pip install python-binance
-TA-Lib - Python wrapper for TA-Lib ~ pip install TA_Lib-0.4.22-cp39-cp39-win_amd64.whl
-numpy - library for multi-dimensional arrays and matrices, mathematical functions ~ pip install numpy
-Python WebSocketclient - Websocket client for python. This provide the low level APIs for WebSocket ~ pip install websocket-client
+1. Python 3.9 - The most popular language for data science, analysis, and machine learning
+2. Python-Binance - Unofficial Python wrapper for the Binance exchange REST API v3 ~ pip install python-binance
+3. TA-Lib - Python wrapper for TA-Lib ~ pip install TA_Lib-0.4.22-cp39-cp39-win_amd64.whl
+4. numpy - library for multi-dimensional arrays and matrices, mathematical functions ~ pip install numpy
+5. Python WebSocketclient - Websocket client for python. This provide the low level APIs for WebSocket ~ pip install websocket-client
 
 Variety of libraries were been installed and imported for this project which include WebSocket Client, JSON data, numpy library, talib, local config file and used pprint to analyze the data coming in from binance. Also to note that all python binance packages will need to installed first. 
 
@@ -18,7 +18,7 @@ The data is being recieved from a Websocket for Candle Stick Streams, please fin
 All the closing prices are being tracked here for each of the candle sticks so that we initialize a list. Also, the position is being tracked if are in the position to buy/sell. I have intialized the Binance Client so that buy/sell orders can be executed against Binance. 
 
 And then comes the step where the function to order is defined and built.
-## In Depth Analysis on How the Crytpo Bot works!
+## How does the Crytpo Bot work?
 Initially, how it happens is that first a connection is made to a websocket by creating a websocket app which has a socket to listen "SOCKET = wss://stream.binance.com:9443/ws/ethusdt@kline_1m". 
 
 So, we are listening for data that is coming in and we will call different functions whenever we get a new message and when we open a connection "ws = websocket.WebSocketApp(SOCKET, on_open=on_open, on_close=on_close, on_message=on_message). When we run the websocket, each time we recieve a message and we are going to be receiving some pricing data.
@@ -41,7 +41,7 @@ In order to buy and sell crypto automatically with the help of Binance, we need 
 
 The Program ran successfully without any errors. This program can be run overnight and the best part is that we can use different technical indicators to experiment with our Crypto Bot. 
 
-## Binance WebSocket Kline Candlestick Streams Payload Terminology used in the code:
+## Binance websocket kline candlestick streams payload terminology used in the code:
 - k = Lenght and Breadth of the candle (includes start time, end time, high/low/close/open price)
 - c = Close price of the candlestick
 - x = True/ False , it tells us that when x=true that means that a new candlestick formation has started. 
