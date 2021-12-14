@@ -45,7 +45,7 @@ The Program ran successfully without any errors. This program can be run overnig
 - k = Lenght and Breadth of the candle (includes start time, end time, high/low/close/open price)
 - c = Close price of the candlestick
 - x = True/ False , it tells us that when x=true that means that a new candlestick formation has started. 
-## References: 
+## Few Important Resources: 
 - [Binance API Wrapper for Creating Orders and placing a Binance client](https://github.com/sammchardy/python-binance)
 - [PythonWebSocketClient Long Lived Connection](https://pypi.org/project/websocket-client/)
 - [Binance API WebSocketStreams - KlineCandleStickStreams](https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md#klinecandlestick-streams)
