@@ -55,3 +55,6 @@ The Program ran successfully without any errors. This program can be run overnig
 I had a few challenges when it came to installing numpy and talib modules. I ran into an error "modulenotfounderror: no module named 'numpy'". In order to help resolve the fix, I navigated to the Python Scripts Directory (Python C:\Python\Python3.9\Scripts). Coopy the Scripts Directoyr Path (Python C:\Python\Python3.9\Scripts) . Now launch "CMD" with Administrator Rights, go to the Scripts path by pasting "cd C:\Python\Python3.9\Scripts" in CMD window. Now, enter the command "pip install numpy". 
 
 Similar was the case for TA-Lib. Be sure to save the .whl file under Python Scripts Directory and then run the command "pip install TA_Lib-0.4.22-cp39-cp39-win_amd64.whl" from CMD Window to install TA-Lib. 
+
+
+
