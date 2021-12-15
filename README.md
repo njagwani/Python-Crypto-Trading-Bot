@@ -3,7 +3,7 @@ Here is my finished project on Python Crypto Trading Bot in Real-Time to Buy and
 
 In this project, I have used Python,  TA libraries, Binance API's & Websockets to retrieve Real-time price data and applied Technical Indicators to this pricing data in order to execute Trades automatically using Binance as a Broker.
 
-# Project Overview!
+## Project Overview!
 
 ![](Images/Cryptoproj0.PNG)
 
