@@ -7,7 +7,7 @@ In this project, I have used Python,  TA libraries, Binance API's & Websockets t
 
 ![](Images/Cryptoproj0.PNG)
 
-- Binance is the Broker and Data provider here. In this projtec, I  have used websockets to pull data from Binance. Execute Orders through Binance API. Binance provides a bunch of streams. There is streaming data coming through and those streams have a lot of names. We can have a client connect to one of the web socket streams and maintain a persistent connection rather than always requesting data with an HTTP request.
+- Binance is the Broker and Data provider here. In this project, I  have used websockets to pull data from Binance. Execute Orders through Binance API. Binance provides a bunch of streams. There is streaming data coming through and those streams have a lot of names. We can have a client connect to one of the web socket streams and maintain a persistent connection rather than always requesting data with an HTTP request.
 
 - On these streams, there are streams of pricing data (open high low, close data, candle sticks and individual ticks that make up those cancle sticks). We need to provide some sort of client to connect and read the data from websocket server.  I have used Python Websocket client and it is going to be reading data from these streams.
 
