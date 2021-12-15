@@ -7,9 +7,9 @@ In this project, I have used Python,  TA libraries, Binance API's & Websockets t
 
 ![](Images/Cryptoproj0.PNG)
 
-- Binance is the Broker and Data provider here. In this project, I  have used websockets to pull data from Binance. Execute Orders through Binance API. Binance provides a bunch of streams. There is streaming data coming through and those streams have a lot of names. We can have a client connect to one of the web socket streams and maintain a persistent connection rather than always requesting data with an HTTP request.
+- Binance is the Broker and Data provider here. In this project, I  have used websockets to pull data from Binance and execute Orders through Binance API. Binance provides a bunch of streams. There is streaming data coming through and those streams have a lot of names (ETH, BTC, QTUM, LINK, DASH...etc). We can have a client connect to one of the web socket streams and maintain a persistent connection rather than always requesting data with an HTTP request.
 
-- On these streams, there are streams of pricing data (open high low, close data, candle sticks and individual ticks that make up those cancle sticks). We need to provide some sort of client to connect and read the data from websocket server.  I have used Python Websocket client and it is going to be reading data from these streams.
+- On these streams, there are streams of pricing data (open high low, close data, candle sticks and individual ticks that make up those candle sticks). We need to provide some sort of client to connect and read the data from websocket server.  I have used Python Websocket client and it is going to be reading data from these streams.
 
 - Python is going to get some data coming in from Binance and we are going to process the data. In this project, I am just interested in closing prices. Here, I am going to be using TA-Lib to apply the RSI indicator to the series of pricing data. If the RSI > 70, we are going to hit binance as a broker and issue a SELL HTTP request. If RSI < 30, we are going to issue a BUY HTTP request.
 
